@@ -1,3 +1,8 @@
+// Author : Surbhi Gupta 
+// Reference https://blog.codemagic.io/how-to-build-react-native-ios-app-on-windows/ 
+//https://reactnative.dev/docs/getting-started 
+//https://reactnative.dev/
+//https://docs.expo.dev/tutorial/create-your-first-app/ 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
