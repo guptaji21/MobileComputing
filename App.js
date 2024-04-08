@@ -10,8 +10,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomePage} />
-        <Stack.Screen name="SecondPage" component={SecondPage} />
+        <Stack.Screen name="Page 1" component={HomePage} />
+        <Stack.Screen name="Page 2" component={SecondPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
