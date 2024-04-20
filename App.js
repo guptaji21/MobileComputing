@@ -1,23 +1,22 @@
-// Author : Surbhi Gupta 
-// Reference https://blog.codemagic.io/how-to-build-react-native-ios-app-on-windows/ 
-//https://reactnative.dev/docs/getting-started 
-//https://reactnative.dev/
-//https://docs.expo.dev/tutorial/create-your-first-app/ 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomePage from './HomePage';
 import SecondPage from './SecondPage';
+import SettingsPage from './SettingsPage';
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Page 1" component={HomePage} />
-        <Stack.Screen name="Page 2" component={SecondPage} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+function App() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home">
+                <Stack.Screen name="Home" component={HomePage} options={{ title: 'Welcome' }}/>
+                <Stack.Screen name="Settings" component={SettingsPage} options={{ title: 'Settings' }}/>
+                <Stack.Screen name="Page 2" component={SecondPage} options={{ title: 'Page 2' }}/>
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
+
+export default App;

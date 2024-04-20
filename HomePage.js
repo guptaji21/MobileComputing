@@ -4,44 +4,81 @@
 //https://reactnative.dev/
 //https://docs.expo.dev/tutorial/create-your-first-app/ 
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function HomePage({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.headerText}>Welcome to Surbhi's Hello World App!</Text>
-      <Text style={styles.contentText}>This is the Welcome page!</Text>
+      <Text style={styles.headerText}>Welcome to Surbhi's First App</Text>
+      <Text style={styles.contentText}>Check out the options below:</Text>
       <View style={styles.buttonContainer}>
-        <Button
-          title="Click to see what's next?"
-          onPress={() => navigation.navigate('Page 2')}
-          color="#841584" // This sets the button color
-        />
+        <TouchableOpacity
+          style={[styles.button, { backgroundColor: '#FF6F61' }]}
+          onPress={() => navigation.navigate('Page 2')}>
+          <>
+          
+            <AntDesign name="pluscircleo" size={24} color="#FFFFFF" /> 
+            <Text style={styles.buttonText}>Add Media</Text>
+          </>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, { backgroundColor: '#6B5B95' }]}
+
+          onPress={() => navigation.navigate('Settings')}>
+          <>
+            <AntDesign name="setting" size={24} color="#FFFFFF" />
+            <Text style={styles.buttonText}>Settings</Text>
+          </>
+        </TouchableOpacity>
       </View>
     </View>
   );
 }
 
-// Define the styles
+// Define the styles --- > Working on keeping it seprate. The work in on for it! --> AppStyles.js is created already!
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FFC0CB', 
+    backgroundColor: '#FDF5E6', 
+    padding: 20,
   },
   headerText: {
-    fontSize: 22,
+    fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: '#444',
+    color: '#333333',
     textAlign: 'center',
-    paddingHorizontal: 20,
   },
   contentText: {
-    fontSize: 16,
-    color: '#666', 
+    fontSize: 18,
+    color: '#666666',
     marginBottom: 30,
     textAlign: 'center',
-  }
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+  button: {
+    width: '45%',
+    height: 80,
+    borderRadius: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 5,
+  },
+  buttonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    marginTop: 5, 
+  },
 });
+
