@@ -16,7 +16,7 @@ function App() {
           <Stack.Screen name="Home" component={HomePage} options={{ title: 'Welcome' }} />
           <Stack.Screen name="Settings" component={SettingsPage} options={{ title: 'Settings' }} />
           <Stack.Screen name="Page 2" component={SecondPage} options={{ title: 'Page 2' }} />
-          <Stack.Screen name="Media Control" component={TombstoneDemo} options={{ title: 'Input Text' }} />
+          <Stack.Screen name="TombstoneDemo" component={TombstoneDemo} options={{ title: 'Input Text' }} />
         </Stack.Navigator>
       </NavigationContainer>
     );
