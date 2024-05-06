@@ -27,7 +27,7 @@ export default function HomePage({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: '#4682B4' }]}
-          onPress={() => navigation.navigate('Media Control')}>
+          onPress={() => navigation.navigate('TombstoneDemo')}>
           <Feather name="type" size={24} color="#FFFFFF" />
           <Text style={styles.buttonText}>Input Text</Text>
         </TouchableOpacity>
