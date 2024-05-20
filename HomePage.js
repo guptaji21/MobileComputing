@@ -4,8 +4,8 @@
 //https://reactnative.dev/
 //https://docs.expo.dev/tutorial/create-your-first-app/ 
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { AntDesign, Feather } from '@expo/vector-icons';
 
 export default function HomePage({ navigation }) {
   return (
@@ -16,33 +16,32 @@ export default function HomePage({ navigation }) {
         <TouchableOpacity
           style={[styles.button, { backgroundColor: '#FF6F61' }]}
           onPress={() => navigation.navigate('Page 2')}>
-          <>
-          
-            <AntDesign name="pluscircleo" size={24} color="#FFFFFF" /> 
-            <Text style={styles.buttonText}>Add Media</Text>
-          </>
+          <AntDesign name="pluscircleo" size={24} color="#FFFFFF" />
+          <Text style={styles.buttonText}>Add Media</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: '#6B5B95' }]}
-
           onPress={() => navigation.navigate('Settings')}>
-          <>
-            <AntDesign name="setting" size={24} color="#FFFFFF" />
-            <Text style={styles.buttonText}>Settings</Text>
-          </>
+          <AntDesign name="setting" size={24} color="#FFFFFF" />
+          <Text style={styles.buttonText}>Settings</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, { backgroundColor: '#4682B4' }]}
+          onPress={() => navigation.navigate('TombstoneDemo')}>
+          <Feather name="type" size={24} color="#FFFFFF" />
+          <Text style={styles.buttonText}>Input Text</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
 
-// Define the styles --- > Working on keeping it seprate. The work in on for it! --> AppStyles.js is created already!
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FDF5E6', 
+    backgroundColor: '#FDF5E6',
     padding: 20,
   },
   headerText: {
@@ -64,7 +63,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   button: {
-    width: '45%',
+    width: '30%',
     height: 80,
     borderRadius: 15,
     justifyContent: 'center',
@@ -73,12 +72,12 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 5,
+    marginHorizontal: 5, 
   },
   buttonText: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#FFFFFF',
-    marginTop: 5, 
+    marginTop: 5,
   },
 });
-
